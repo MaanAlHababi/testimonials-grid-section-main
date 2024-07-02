@@ -3,7 +3,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
+b, u, i, center, footer, main,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
@@ -17,7 +17,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure, main,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -45,11 +45,12 @@ html{
 
 1. "Verified Graduate" has the same color as the person's name with 50% opacity
 2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity*/
+
 .one {
 	background-image: url(images/bg-pattern-quotation.svg);
 	background-color: var(--moderate-violet);
 	background-repeat: no-repeat;
-	background-position:  187px 1px;
+	background-position:  230px 10px;
 }
 .two {
 	background-color: var(--Very-dark-grayish-blue);
@@ -71,7 +72,6 @@ blockquote,  h2{
 	font-family: "Barlow Semi Condensed", sans-serif;
 	font-weight: 500;
 	font-style: normal;
-	color: var(--White);
 }
 
   h1, .crd__txt--big {
@@ -81,21 +81,26 @@ blockquote,  h2{
   }
   
 body, html {
-	max-width: 375px;
+	font-size:1rem;
+	margin: auto;
+	max-width: 100%;;
 	width: 100%;
-	height: auto;
+	max-height: 100%;;
+	background-color:var(--Light-grayish-blue);
 }
 main {
 	margin: auto;
+	background-color:var(--Light-grayish-blue);
 	padding: 2.5em;
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	gap: 20px;
 	justify-content: center;
 	align-items: baseline;
-	grid-template-columns: 1fr;
-	grid-template-rows: 2fr 1fr 1fr 2fr; 
+	width: 350px; 
 }
 header{
+	margin: 0;
+	padding: 0;
 	justify-content:baseline;
 	align-items: center;
 	display: flex;
@@ -106,8 +111,7 @@ h1, h2 {
 	justify-self: baseline;;
 	vertical-align: middle;
 	align-self: center;
-line-height: 1.4;
-margin-left: 1rem;
+line-height: 1.2;
 color: var(--White);
 }
 h1 {
@@ -122,11 +126,9 @@ picture {
 	display: grid;;
 	vertical-align: middle;;
 	padding: 1em 0 0 0;
-	width: 10%;
 }
 img{
-	
-	width: 100%;
+	width: 60%;
 	border-radius: 50%;
 	border: var(--Light-gray) solid;
 }
@@ -135,8 +137,6 @@ section {
 	vertical-align: middle;
 	justify-content: baseline;
 	border-radius: 7px;
-	margin: 20px auto;
-	border: solid black;
 	max-width: 100%;
 	height: auto;
 	padding: 0 2em 2em 1.9em;
@@ -155,6 +155,78 @@ header, blockquote {
 blockquote{
 	padding-right: .5em;
 	opacity: 50%;
+	color: var(--White)
 }
+.dark{
+	color: var(--Very-dark-blackish-blue);
+}
+@media screen and (min-width: 800px) {
+	*, *::after, *::before{
+		box-sizing: border-box;
+	}
+	
+	img{
+		width: 60%;
+	}
+	html, body {
+		max-width: 100%;
+		max-height: 100%;
+		padding: 1.2em;
+		font-size: .9rem;
+	}
+	section {
+	
+		
+	min-height:100%;		
+		vertical-align: middle;
+		align-self:flex-start;
+		width: auto;
+		height: auto;
+	}
+	h1,h2{
+		margin-left: 0;
+		padding-left: 0;
+	}
+	main {
+		mask-border-mode: ;
+		min-height: 100%;
+		padding: 0;
+		margin: auto;;
+		width: 100%;
+		display: grid;
+		gap: 20px;
+		align-items: center;
+		justify-content: space-evenly;
+		grid-template-areas: 
+		"one one two four"
+		"one one two four"
+		"three five five four"
+		"three five five four";
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: ;
+	}
+	.one {
+	grid-area: one;
+	}
+	.two{
+grid-area: two;
+	}
+	.three{
+grid-area: three;
+	}
+	.four{
+	grid-area: five;
+	}
+	.five {
+		grid-area: four;
+	}
+}
+
+
+
+
+
+
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }

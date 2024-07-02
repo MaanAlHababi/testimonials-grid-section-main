@@ -1,0 +1,160 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+ol, ul {
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html{
+	font-size: 13px;
+}
+:root{
+--moderate-violet: hsl(263, 55%, 52%);
+--Very-dark-grayish-blue: hsl(217, 19%, 35%);
+--Very-dark-blackish-blue: hsl(219, 29%, 14%);
+--White: hsl(0, 0%, 100%);
+
+--Light-gray: hsl(0, 0%, 81%);
+--Light-grayish-blue: hsl(210, 46%, 95%);
+}
+/*Note for text colors:
+
+1. "Verified Graduate" has the same color as the person's name with 50% opacity
+2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity*/
+.one {
+	background-image: url(images/bg-pattern-quotation.svg);
+	background-color: var(--moderate-violet);
+	background-repeat: no-repeat;
+	background-position:  187px 1px;
+}
+.two {
+	background-color: var(--Very-dark-grayish-blue);
+}
+.three{
+	background-color: var(--White);
+	color: var(--Very-dark-grayish-blue);
+}
+.four {
+	background-color:var(--Very-dark-blackish-blue);
+	
+}
+.five{
+	background-color: var(--White);
+	color:var(--Very-dark-blackish-blue);
+}
+
+blockquote,  h2{
+	font-family: "Barlow Semi Condensed", sans-serif;
+	font-weight: 500;
+	font-style: normal;
+	color: var(--White);
+}
+
+  h1, .crd__txt--big {
+	font-family: "Barlow Semi Condensed", sans-serif;
+	font-weight: 600;
+	font-style: normal;
+  }
+  
+body, html {
+	max-width: 375px;
+	width: 100%;
+	height: auto;
+}
+main {
+	margin: auto;
+	padding: 2.5em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: baseline;
+	grid-template-columns: 1fr;
+	grid-template-rows: 2fr 1fr 1fr 2fr; 
+}
+header{
+	justify-content:baseline;
+	align-items: center;
+	display: flex;
+}
+
+h1, h2 {
+	display: grid;
+	justify-self: baseline;;
+	vertical-align: middle;
+	align-self: center;
+line-height: 1.4;
+margin-left: 1rem;
+color: var(--White);
+}
+h1 {
+	margin-top: 1em;
+	opacity: 80%;
+	font-size: 1rem;
+}
+h2{	opacity: 50%;
+	font-size: .85rem;
+}
+picture {
+	display: grid;;
+	vertical-align: middle;;
+	padding: 1em 0 0 0;
+	width: 10%;
+}
+img{
+	
+	width: 100%;
+	border-radius: 50%;
+	border: var(--Light-gray) solid;
+}
+section {
+	display: grid;
+	vertical-align: middle;
+	justify-content: baseline;
+	border-radius: 7px;
+	margin: 20px auto;
+	border: solid black;
+	max-width: 100%;
+	height: auto;
+	padding: 0 2em 2em 1.9em;
+}
+header, blockquote {
+	line-height: 1.4;
+	margin:  1.1em 0;
+}
+.crd__txt--big{
+	display: block;
+	opacity: 80%;
+	color:var(--White);
+	font-size: 1.5em;
+	line-height:1.2;
+}
+blockquote{
+	padding-right: .5em;
+	opacity: 50%;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
